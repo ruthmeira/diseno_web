@@ -1,2 +1,2 @@
-# dise-o_web
+# diseño_web
 Prácticas de Diseño Web
