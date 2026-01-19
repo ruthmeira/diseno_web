@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Amor en Letras</title>
+
+    <!-- ===============================
+         GOOGLE FONTS
+         =============================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- ===============================
+         CSS EXTERNO
+         =============================== -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ===============================
+         HEADER: Logo + Nombre de la empresa
+         =============================== -->
+    <header class="header">
+        <!-- Nombre de la librería -->
+        <h1 class="titulo">Amor en Letras</h1>
+
+        <!-- Logo -->
+        <img src="img/logo.png" alt="Logo Amor en Letras" class="logo">
+    </header>
+
+    <!-- ===============================
+         NAV: Buscador + Menú de navegación
+         =============================== -->
+    <nav class="nav">
+        <!-- BUSCADOR -->
+        <form class="buscador" action="#" method="get">
+            <img src="img/lupa.png" alt="Lupa" class="icon-lupa">
+            <input type="text" name="buscar" placeholder="Buscar libros..." class="input-buscador">
+        </form>
+
+        <!-- MENÚ DE ENLACES -->
+        <ul class="menu-enlaces">
+            <li class="menu-item">Tu librería</li>
+            <li class="menu-item"><a href="tienda.html">Compra Online</a></li>
+            <li class="menu-item">Contacto</li>
+        </ul>
+    </nav>
+
+    <!-- ===============================
+         CONTENIDO PRINCIPAL
+         =============================== -->
+    <main>
+
+        <!-- ===============================
+             BLOQUE 1: Presentación de la marca
+             =============================== -->
+        <section class="bloque-presentacion">
+            <!-- Contenido textual -->
+            <div class="contenido-presentacion">
+                <h2 class="titulo-principal">Bienvenido a Amor en Letras</h2>
+                <h4 class="subtitulo">Tu librería de novelas románticas y más</h4>
+                <!-- Botón que redirige a tienda.html -->
+                <a href="tienda.html" class="btn-explorar">Explorar libros</a>
+            </div>
+
+            <!-- Imagen de presentación -->
+            <img src="img/personas-leyendo.png" alt="Personas leyendo" class="imagen-presentacion">
+        </section>
+
+        <!-- ===============================
+             BLOQUE 2: Ofertas y Bestsellers
+             =============================== -->
+        <section class="bloque-ofertas">
+            <h3 class="titulo-ofertas">Descubre nuestras ofertas y bestsellers de romance</h3>
+
+            <!-- Grid de productos -->
+            <div class="grid-ofertas">
+                <!-- Tarjeta libro 1 -->
+                <article class="card-libro">
+                    <img src="img/libro1.png" alt="Libro 1" class="imagen-libro">
+                    <div class="titulo-libro">Oscar. Un acuerdo matrimonial imposible (Salt Mountains nº 1)</div>
+                    <hr class="linea-separacion">
+                    <div class="precio-libro">15,00€</div>
+                </article>
+
+                <!-- Tarjeta libro 2 -->
+                <article class="card-libro">
+                    <img src="img/libro2.png" alt="Libro 2" class="imagen-libro">
+                    <div class="titulo-libro">Una luna sin miel</div>
+                    <hr class="linea-separacion">
+                    <div class="precio-libro">17,05€</div>
+                </article>
+
+                <!-- Tarjeta libro 3 -->
+                <article class="card-libro">
+                    <img src="img/libro3.png" alt="Libro 3" class="imagen-libro">
+                    <div class="titulo-libro">Cupido, tenemos que hablar</div>
+                    <hr class="linea-separacion">
+                    <div class="precio-libro">15,20€</div>
+                </article>
+
+                <!-- Tarjeta libro 4 -->
+                <article class="card-libro">
+                    <img src="img/libro4.png" alt="Libro 4" class="imagen-libro">
+                    <div class="titulo-libro">Salvatore (Bestias peligrosas nª1)</div>
+                    <hr class="linea-separacion">
+                    <div class="precio-libro">17,99€</div>
+                </article>
+
+                <!-- Tarjeta libro 5 -->
+                <article class="card-libro">
+                    <img src="img/libro5.png" alt="Libro 5" class="imagen-libro">
+                    <div class="titulo-libro">Besar a un elfo</div>
+                    <hr class="linea-separacion">
+                    <div class="precio-libro">16,05€</div>
+                </article>
+
+                <!-- Tarjeta libro 6 -->
+                <article class="card-libro">
+                    <img src="img/libro6.png" alt="Libro 6" class="imagen-libro">
+                    <div class="titulo-libro">Donde todo brilla</div>
+                    <hr class="linea-separacion">
+                    <div class="precio-libro">17,95€</div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===============================
+             BLOQUE 3: Buscador de tiendas físicas
+             =============================== -->
+        <section class="bloque-tiendas">
+
+            <!-- COLUMNA IZQUIERDA: Buscador + Mapa -->
+            <div class="div-mapa-buscador">
+                <!-- Buscador tiendas -->
+                <form class="buscador-tiendas" action="#" method="get">
+                    <img src="img/lupa2.png" alt="Lupa" class="icon-lupa">
+                    <input type="text" name="buscar-tienda" placeholder="Busca tu tienda más cercana..." class="input-buscador">
+                </form>
+
+                <!-- Imagen mapa -->
+                <img src="img/mapa.png" alt="Mapa de tiendas" class="imagen-mapa">
+            </div>
+
+            <!-- COLUMNA DERECHA: Tiendas -->
+            <div class="div-tiendas-general">
+                <h3 class="titulo-tiendas">Tiendas físicas</h3>
+
+                <div class="filas-tiendas">
+                    <!-- Disponibles -->
+                    <div class="div-tiendas disponibles">
+                        <div class="titulo-div">Disponibles:</div>
+                        <div class="tienda">
+                            <h5 class="nombre-tienda">Tienda Centro</h5>
+                            <ul class="direccion-tienda">
+                                <li>Calle Amor 45</li>
+                            </ul>
+                        </div>
+                        <div class="tienda">
+                            <h5 class="nombre-tienda">Tienda Norte</h5>
+                            <ul class="direccion-tienda">
+                                <li>Avenida Romance 120</li>
+                            </ul>
+                        </div>
+                        <div class="tienda">
+                            <h5 class="nombre-tienda">Tienda Sur</h5>
+                            <ul class="direccion-tienda">
+                                <li>Plaza Beso 98</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Próximas -->
+                    <div class="div-tiendas proximas">
+                        <div class="titulo-div">Próximamente:</div>
+                        <div class="tienda">
+                            <h5 class="nombre-tienda">Tienda Centro</h5>
+                            <ul class="direccion-tienda">
+                                <li>Calle Suspiro 81</li>
+                            </ul>
+                        </div>
+                        <div class="tienda">
+                            <h5 class="nombre-tienda">Tienda Norte</h5>
+                            <ul class="direccion-tienda">
+                                <li>Avenida Amanecer 12</li>
+                            </ul>
+                        </div>
+                        <div class="tienda">
+                            <h5 class="nombre-tienda">Tienda Sur</h5>
+                            <ul class="direccion-tienda">
+                                <li>Paseo del Rio 14</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===============================
+         FOOTER: 3 columnas
+         =============================== -->
+    <footer class="footer">
+        <!-- IZQUIERDA: Redes sociales -->
+        <div class="footer-izquierda">
+            <img src="img/instagram.png" alt="Instagram" class="red-social">
+            <img src="img/facebook.png" alt="Facebook" class="red-social">
+            <img src="img/x.png" alt="X" class="red-social">
+        </div>
+
+        <!-- CENTRO: Enlaces -->
+        <div class="footer-centro">
+            <span class="enlace-izq">Política de datos</span>
+            <span class="enlace-der">Cookies</span>
+        </div>
+
+        <!-- DERECHA: Copyright -->
+        <div class="footer-derecha">
+            © 2025 Amor en Letras
+        </div>
+    </footer>
+
+</body>
+</html>

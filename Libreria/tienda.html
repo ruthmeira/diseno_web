@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Amor en Letras - Tienda</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===============================
+         HEADER: Igual que index.html
+         =============================== -->
+    <header class="header">
+        <h1 class="titulo">Amor en Letras</h1>
+        <img src="img/logo.png" alt="Logo Amor en Letras" class="logo">
+    </header>
+
+    <!-- ===============================
+         NAV: Buscador + Menú
+         =============================== -->
+    <nav class="nav">
+        <!-- Buscador -->
+        <form class="buscador" action="#" method="get">
+            <img src="img/lupa.png" alt="Lupa" class="icon-lupa">
+            <input type="text" name="buscar" placeholder="Buscar libros..." class="input-buscador">
+        </form>
+
+        <!-- Menú -->
+        <ul class="menu-enlaces">
+            <li class="menu-item"><a href="index.html">Tu librería</a></li>
+            <li class="menu-item">Compra Online</li>
+            <li class="menu-item">Contacto</li>
+        </ul>
+    </nav>
+
+    <!-- ===============================
+         MAIN: Página de Productos
+         Estructura: 2 columnas (categorías 25%, productos 75%)
+         =============================== -->
+    <main class="tienda-main">
+
+    <!-- COLUMNA IZQUIERDA: CATEGORÍAS -->
+    <aside class="categorias">
+        <h3 class="titulo-categorias">Categorías</h3>
+
+        <div class="grupo-categorias">
+            <!-- Categoría 1 -->
+            <label class="categoria-item">
+                <input type="checkbox">
+                <span class="nombre-categoria">Todos los productos</span>
+            </label>
+
+            <!-- Categoría 2 -->
+            <label class="categoria-item">
+                <input type="checkbox">
+                <span class="nombre-categoria">Libros</span>
+            </label>
+
+            <!-- Categoría 3 -->
+            <label class="categoria-item">
+                <input type="checkbox">
+                <span class="nombre-categoria">Tazas</span>
+            </label>
+
+            <!-- Categoría 4 -->
+            <label class="categoria-item">
+                <input type="checkbox">
+                <span class="nombre-categoria">Bolsas</span>
+            </label>
+
+            <!-- Categoría 5 -->
+            <label class="categoria-item">
+                <input type="checkbox">
+                <span class="nombre-categoria">Otros</span>
+            </label>
+        </div>
+    </aside>
+
+    <!-- COLUMNA DERECHA: PRODUCTOS -->
+    <section class="productos">
+
+        <div class="grid-productos">
+
+            <!-- TARJETA -->
+            <article class="card-producto">
+                <img src="img/libro1.png" alt="Libro" class="imagen-producto">
+
+                <h4 class="titulo-producto">
+                    Oscar. Un acuerdo matrimonial imposible (Salt Mountains nº 1)
+                </h4>
+
+                <p class="descripcion-producto">
+                    Un matrimonio por conveniencia que lentamente se transforma en un amor inesperado y profundo.
+                </p>
+
+                <div class="precio-producto">15,00€</div>
+
+                <button class="btn-carrito">Añadir al carrito</button>
+            </article>
+
+            <!-- TARJETA -->
+            <article class="card-producto">
+                <img src="img/libro2.png" alt="Libro" class="imagen-producto">
+
+                <h4 class="titulo-producto">
+                    Una luna sin miel
+                </h4>
+
+                <p class="descripcion-producto">
+                    Una historia de amor, secretos y segundas oportunidades que desafían el destino.
+                </p>
+
+                <div class="precio-producto">17,05€</div>
+
+                <button class="btn-carrito">Añadir al carrito</button>
+            </article>
+
+            <!-- TARJETA -->
+            <article class="card-producto">
+                <img src="img/libro3.png" alt="Libro" class="imagen-producto">
+
+                <h4 class="titulo-producto">
+                    Cupido, tenemos que hablar
+                </h4>
+
+                <p class="descripcion-producto">
+                    Romance contemporáneo con toques de humor, donde el amor llega cuando menos lo esperas.
+                </p>
+
+                <div class="precio-producto">15,20€</div>
+
+                <button class="btn-carrito">Añadir al carrito</button>
+            </article>
+
+            <!-- TARJETA -->
+            <article class="card-producto">
+                <img src="img/libro4.png" alt="Libro" class="imagen-producto">
+
+                <h4 class="titulo-producto">
+                    Salvatore (Bestias peligrosas nª1)
+                </h4>
+
+                <p class="descripcion-producto">
+                    Un relato apasionante sobre pasión, traición y redención entre dos almas destinadas a encontrarse.
+                </p>
+
+                <div class="precio-producto">17,99€</div>
+
+                <button class="btn-carrito">Añadir al carrito</button>
+            </article>
+
+            <!-- TARJETA -->
+            <article class="card-producto">
+                <img src="img/libro5.png" alt="Libro" class="imagen-producto">
+                <h4 class="titulo-producto">
+                    Besar a un elfo
+                </h4>
+                <p class="descripcion-producto">
+                    Romance mágico lleno de encuentros inesperados y chispa sobrenatural.
+                </p>
+                <div class="precio-producto">16,05€</div>
+                <button class="btn-carrito">Añadir al carrito</button>
+            </article>
+
+            <!-- TARJETA -->
+            <article class="card-producto">
+                <img src="img/libro6.png" alt="Libro" class="imagen-producto">
+                <h4 class="titulo-producto">
+                    Donde todo brilla
+                </h4>
+                <p class="descripcion-producto">
+                    Una historia de amor que ilumina incluso los momentos más oscuros del corazón.
+                </p>
+                <div class="precio-producto">17,95€</div>
+                <button class="btn-carrito">Añadir al carrito</button>
+            </article>
+
+            <!-- TARJETA -->
+            <article class="card-producto">
+                <img src="img/libro7.png" alt="Libro" class="imagen-producto">
+                <h4 class="titulo-producto">
+                    Donde no puedas encontrarme
+                </h4>
+                <p class="descripcion-producto">
+                    Un romance intenso lleno de secretos que ponen a prueba el corazón.
+                </p>
+                <div class="precio-producto">16,05€</div>
+                <button class="btn-carrito">Añadir al carrito</button>
+            </article>
+
+            <!-- TARJETA -->
+            <article class="card-producto">
+                <img src="img/libro8.png" alt="Libro" class="imagen-producto">
+                <h4 class="titulo-producto">
+                    El arte de ser nosotros
+                </h4>
+                <p class="descripcion-producto">
+                    Una historia sobre amor, confianza y descubrir juntos el verdadero “nosotros”.
+                </p>
+                <div class="precio-producto">10,40€</div>
+                <button class="btn-carrito">Añadir al carrito</button>
+            </article>
+
+            <!-- TARJETA -->
+            <article class="card-producto">
+                <img src="img/libro9.png" alt="Libro" class="imagen-producto">
+                <h4 class="titulo-producto">
+                    Marcos (Bestias peligrosas nº 2)
+                </h4>
+                <p class="descripcion-producto">
+                    Pasión y peligro se entrelazan en esta segunda entrega de amor y aventura.
+                </p>
+                <div class="precio-producto">16,63€</div>
+                <button class="btn-carrito">Añadir al carrito</button>
+            </article>
+        </div>
+
+    </section>
+
+</main>
+
+
+    <!-- ===============================
+         FOOTER: Igual que index.html
+         =============================== -->
+    <footer class="footer">
+        <div class="footer-izquierda">
+            <img src="img/instagram.png" alt="Instagram" class="red-social">
+            <img src="img/facebook.png" alt="Facebook" class="red-social">
+            <img src="img/x.png" alt="X" class="red-social">
+        </div>
+
+        <div class="footer-centro">
+            <span class="enlace-izq">Política de datos</span>
+            <span class="enlace-der">Cookies</span>
+        </div>
+
+        <div class="footer-derecha">
+            © 2025 Amor en Letras
+        </div>
+    </footer>
+
+</body>
+</html>

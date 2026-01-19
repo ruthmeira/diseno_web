@@ -1,0 +1,611 @@
+/* =====================================================
+   GENERAL
+   ===================================================== */
+* {
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Akshar', sans-serif;
+    background-color: #f8faf9;
+    color: #043029;
+}
+
+/* =====================================================
+   HEADER: Logo + Nombre de la empresa
+   ===================================================== */
+.header {
+    display: flex;                    /* Layout horizontal */
+    justify-content: space-between;   /* Título a la izquierda, logo a la derecha */
+    align-items: center;              /* Centrado vertical */
+    padding: 15px 30px;
+    background-color: #cfd7f7;        /* Color de fondo */
+}
+
+/* Título del header */
+.header .titulo {
+    font-size: 32px;
+    font-weight: 600;
+    color: #0b907c;
+}
+
+/* Logo */
+.header .logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain; /* Mantiene proporciones */
+}
+
+/* =====================================================
+   NAV: Buscador + Menú de navegación
+   ===================================================== */
+.nav {
+    display: flex;                   /* Layout horizontal */
+    justify-content: space-between;   /* Buscador izquierda, menú derecha */
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #f3f5fd;
+    gap: 20px;                 /* Espacio entre buscador y menú */
+}
+
+/* ---------------------
+   Buscador principal
+   --------------------- */
+.buscador {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 36px;
+    background-color: #e9efee;
+    padding: 0 10px;
+    border-radius: 8px;
+    gap: 10px;
+}
+
+/* Imagen de lupa */
+.buscador .icon-lupa {
+    width: 24px;
+    height: 24px;
+}
+
+.buscador .input-buscador {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: #70948d;
+    width: 100%;
+}
+
+.buscador .input-buscador::placeholder {
+    color: #70948D;
+}
+
+/* ---------------------
+   Menú de navegación
+   --------------------- */
+.menu-enlaces {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.menu-item {
+    color: #0b907c;
+    font-weight: 600;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #0b907c;
+}
+
+/* =====================================================
+   MAIN
+   ===================================================== */
+main {
+    width: 100%;
+}
+
+/* =====================================================
+   BLOQUE 1: Presentación
+   ===================================================== */
+.bloque-presentacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 450px;
+    background-color: #e7ebfb;
+    gap: 50px;
+}
+
+/* Contenido textual */
+.contenido-presentacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+    width: 600px;
+}
+
+/* Título principal */
+.titulo-principal {
+    font-size: 48px;
+    font-weight: 700;
+    color: #0b907c;
+}
+
+/* Subtítulo */
+.subtitulo {
+    font-size: 24px;
+    font-weight: 600;
+    color: #043029;
+}
+
+/* Botón Explorar */
+.btn-explorar {
+    display: inline-block;
+    width: 160px;
+    height: 40px;
+    background-color: #0fc0a6;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 6px;
+    text-decoration: none; /* Para enlaces */
+    cursor: pointer;
+}
+
+/* Imagen de presentación */
+.imagen-presentacion {
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+    max-width: 40%;
+}
+
+/* =====================================================
+   BLOQUE 2: Ofertas y Bestsellers
+   ===================================================== */
+.bloque-ofertas {
+    background-color: #f3f5fd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 32px;
+    gap: 30px;
+}
+
+/* Título ofertas */
+.titulo-ofertas {
+    font-size: 18px;
+    font-weight: 600;
+    color: #043029;
+    text-align: center;
+}
+
+/* Grid de tarjetas */
+.grid-ofertas {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 200px;
+    gap: 60px;
+    height: 300px;
+    width: 100%;
+    overflow-x: auto; /* Scroll horizontal si no caben */
+}
+
+/* Tarjeta libro */
+.card-libro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e2e9e8;
+    width: 200px;
+    height: 250px;
+    padding: 10px 0;
+    gap: 5px;
+}
+
+/* Imagen libro */
+.imagen-libro {
+    width: 180px;
+    height: 170px;
+    object-fit: cover;
+    border: 1px solid black;
+}
+
+/* Título del libro */
+.titulo-libro {
+    width: 180px;
+    height: 39px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #043029;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Línea separadora */
+.linea-separacion {
+    width: 180px;
+    border: 1px solid black;
+}
+
+/* Precio */
+.precio-libro {
+    font-size: 14px;
+    color: #043029;
+    text-align: center;
+}
+
+/* =====================================================
+   BLOQUE 3: Buscador de tiendas físicas
+   ===================================================== */
+.bloque-tiendas {
+    display: flex;
+    gap: 80px;
+    padding: 15px 50px;
+    background-color: #e7ebfb;
+}
+
+/* Columna izquierda: buscador + mapa */
+.div-mapa-buscador {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Buscador tiendas */
+.buscador-tiendas {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 14px;
+    width: 520px;
+    height: 36px;
+    border-radius: 8px;
+    background-color: #dae3e2;
+}
+
+.buscador-tiendas .icon-lupa {
+    width: 20px;
+    height: 20px;
+}
+
+/* Input buscador tiendas */
+.buscador-tiendas .input-buscador {
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+    font-size: 16px;
+    color: #70948d;
+}
+
+.buscador-tiendas .input-buscador::placeholder {
+    color: #4A635E;
+}
+
+/* Imagen del mapa */
+.imagen-mapa {
+    width: 720px;
+    height: 218px;
+}
+
+/* Columna derecha: listado de tiendas */
+.div-tiendas-general {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 600px;
+}
+
+/* Título de tiendas */
+.titulo-tiendas {
+    font-size: 32px;
+    font-weight: 600;
+    color: #043029;
+}
+
+/* Filas de columnas de tiendas */
+.filas-tiendas {
+    display: flex;
+    gap: 120px;
+}
+
+/* Cada columna de tiendas */
+.div-tiendas {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 160px;
+}
+
+/* Subtítulo columna */
+.titulo-div {
+    font-size: 22px;
+    font-weight: 600;
+    color: #043029;
+}
+
+/* Cada tienda */
+.tienda {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* Nombre tienda */
+.nombre-tienda {
+    font-size: 18px;
+    color: #25312F;
+    font-weight: 600;
+}
+
+/* Dirección */
+.direccion-tienda {
+    list-style: none;
+    
+}
+
+.direccion-tienda li {
+    font-size: 14px;
+    color: #4A635E;
+    padding-left: 14px;
+    position: relative;
+}
+
+.direccion-tienda li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background-color: #4a635e;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+    height: 120px;
+    background-color: #cfd7f7;
+    font-size: 16px;
+    color: #25312f;
+}
+
+/* Redes sociales */
+.footer-izquierda {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-izquierda .red-social {
+    width: 40px;
+    height: 40px;
+}
+
+/* Centro: enlaces */
+.footer-centro {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Lado derecho: copyright */
+.footer-derecha {
+    text-align: center;
+}
+
+
+/* =====================================================
+   MAIN TIENDA
+   ===================================================== */
+.tienda-main {
+    display: flex;
+    height: 1470px;
+    background-color: #F3F5FD;
+}
+
+/* ===============================
+   CATEGORÍAS
+   =============================== */
+.categorias {
+    width: 30%;
+    height: 534px;
+    background-color: #E7EBFB;
+    padding: 46px;
+    box-sizing: border-box;
+}
+
+/* Título Categorías */
+.titulo-categorias {
+    width: 200px;
+    height: 24px;
+    font-family: 'Akshar', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #076053;
+    text-align: center;
+    margin: 0 auto 43px auto;
+}
+
+/* Grupo de opciones */
+.grupo-categorias {
+    width: 258px;
+    height: 252px;
+    display: flex;
+    flex-direction: column;
+    gap: 43px;
+}
+
+/* Cada opción */
+.categoria-item {
+    display: flex;
+    align-items: center;
+    width: 258px;
+    height: 16px;
+    gap: 10px;
+}
+
+
+
+
+/* Texto categoría */
+.nombre-categoria {
+    width: 200px;
+    height: 16px;
+    font-family: 'Akshar', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #0B907C;
+}
+
+
+/* ===============================
+   PRODUCTOS
+   =============================== */
+.productos {
+    width: 70%;
+    height: 1470px;
+    background-color: #DBE1F9;
+    padding: 25px 70px;
+    box-sizing: border-box;
+}
+
+/* Grid 3x3 */
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(3, 280px);
+    grid-template-rows: repeat(3, 446px);
+    gap: 40px;
+}
+
+/* ===============================
+   TARJETA PRODUCTO
+   =============================== */
+.card-producto {
+    width: 280px;
+    height: 446px;
+    background-color: #C3CDF5;
+    border: 1px solid #000;
+    border-radius: 8px;
+    padding: 16px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    box-sizing: border-box;
+    transition: box-shadow 0.2s ease;
+
+}
+
+.card-producto:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Imagen */
+.imagen-producto {
+    width: 240px;
+    height: 240px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    object-fit: cover;
+}
+
+/* Título */
+.titulo-producto {
+    width: 240px;
+    height: 34px;
+    font-family: 'Akshar', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #076053;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Descripción */
+.descripcion-producto {
+    width: 240px;
+    height: 60px;
+    font-family: 'Akshar', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #0B907C;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Precio */
+.precio-producto {
+    width: 240px;
+    height: 16px;
+    font-family: 'Akshar', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #0B907C;
+    text-align: center;
+}
+
+/* Botón carrito */
+.btn-carrito {
+    width: 120px;
+    height: 32px;
+    border-radius: 8px;
+    background-color: #16EDCD;
+    border: none;
+    color: #ffffff;
+    font-family: 'Akshar', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease;
+}
+
+.btn-carrito:hover {
+   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* ===============================
+   MENSAJE PRODUCTO AÑADIDO
+   =============================== */
+.mensaje-carrito {
+    width: 248px;
+    height: 48px;
+    background-color: #3DF0D5;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: 'Akshar', sans-serif;
+    font-size: 16px;
+    color: #043029;
+}
