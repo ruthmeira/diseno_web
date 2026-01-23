@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amor en Letras - Tienda</title>
 
     <!-- Google Fonts -->
@@ -26,11 +27,19 @@
          NAV: Buscador + Menú
          =============================== -->
     <nav class="nav">
-        <!-- Buscador -->
+        <!-- BUSCADOR -->
         <form class="buscador" action="#" method="get">
             <img src="img/lupa.png" alt="Lupa" class="icon-lupa">
             <input type="text" name="buscar" placeholder="Buscar libros..." class="input-buscador">
         </form>
+
+        <!-- Toggle menú hamburguesa -->
+        <input type="checkbox" id="menu-toggle" hidden>
+
+        <!-- Icono hamburguesa -->
+        <label for="menu-toggle" class="menu-hamburguesa">
+        ☰
+        </label>
 
         <!-- Menú -->
         <ul class="menu-enlaces">

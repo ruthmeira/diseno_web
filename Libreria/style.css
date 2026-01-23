@@ -18,10 +18,12 @@ body {
    ===================================================== */
 .header {
     display: flex;                    /* Layout horizontal */
-    justify-content: space-between;   /* Título a la izquierda, logo a la derecha */
+    justify-content: center;   /* Centrado horizontal */
     align-items: center;              /* Centrado vertical */
-    padding: 15px 30px;
     background-color: #cfd7f7;        /* Color de fondo */
+    gap: 150px;                  /* Espacio entre logo y título */
+    width: 100%;
+    height: 60px;
 }
 
 /* Título del header */
@@ -32,9 +34,9 @@ body {
 }
 
 /* Logo */
-.header .logo {
-    width: 60px;
-    height: 60px;
+.logo {
+    width: 50px;
+    height: 50px;
     object-fit: contain; /* Mantiene proporciones */
 }
 
@@ -83,6 +85,18 @@ body {
 .buscador .input-buscador::placeholder {
     color: #70948D;
 }
+
+/* ---------------------
+   Menú hamburguesa (móvil)
+   --------------------- */
+
+.menu-hamburguesa {
+  display: none;
+  font-size: 32px;
+  cursor: pointer;
+  color: #0b907c;
+}
+
 
 /* ---------------------
    Menú de navegación
@@ -178,7 +192,7 @@ main {
    ===================================================== */
 .bloque-ofertas {
     background-color: #f3f5fd;
-    display: flex;
+    display: grid;
     flex-direction: column;
     align-items: center;
     padding: 40px 32px;
@@ -196,12 +210,9 @@ main {
 /* Grid de tarjetas */
 .grid-ofertas {
     display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 200px;
-    gap: 60px;
-    height: 300px;
-    width: 100%;
-    overflow-x: auto; /* Scroll horizontal si no caben */
+  grid-template-columns: repeat(auto-fill, 200px);
+  gap: 60px;
+  justify-content: center;
 }
 
 /* Tarjeta libro */
@@ -255,9 +266,12 @@ main {
    ===================================================== */
 .bloque-tiendas {
     display: flex;
-    gap: 80px;
+    flex-wrap: wrap;         /* Permite que las columnas bajen si no caben */
+    gap: 40px;               /* Espacio entre columnas */
+    row-gap: 15px;              /* Espacio vertical entre filas cuando se bajan columnas */
     padding: 15px 50px;
     background-color: #e7ebfb;
+    justify-content: center; /* Centra las columnas cuando hay espacio extra */
 }
 
 /* Columna izquierda: buscador + mapa */
@@ -265,6 +279,8 @@ main {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    flex: 0 0 auto;          /* No se estira automáticamente */
+    align-items: center;     /* Centra el contenido horizontalmente */
 }
 
 /* Buscador tiendas */
@@ -300,17 +316,19 @@ main {
 
 /* Imagen del mapa */
 .imagen-mapa {
-    width: 720px;
-    height: 218px;
+    width: 720px;            /* Mantener el ancho que tú quieres */
+    height: 218px;           /* Mantener la altura que tú quieres */
+    object-fit: cover;       /* Mantiene proporción y recorta si hace falta */
 }
 
 /* Columna derecha: listado de tiendas */
 .div-tiendas-general {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 20px;
-    width: 600px;
+    flex: 0 0 auto;         /* No se estira automáticamente */
+    width: 600px;            /* Mantener ancho fijo */
+    align-items: center;     /* Centra las tarjetas horizontalmente */
 }
 
 /* Título de tiendas */
@@ -425,8 +443,8 @@ main {
    ===================================================== */
 .tienda-main {
     display: flex;
-    height: 1470px;
     background-color: #F3F5FD;
+    flex-wrap: wrap; /* permite que las columnas bajen en tablet/móvil */
 }
 
 /* ===============================
@@ -434,7 +452,7 @@ main {
    =============================== */
 .categorias {
     width: 30%;
-    height: 534px;
+    height: 30%;
     background-color: #E7EBFB;
     padding: 46px;
     box-sizing: border-box;
@@ -454,8 +472,6 @@ main {
 
 /* Grupo de opciones */
 .grupo-categorias {
-    width: 258px;
-    height: 252px;
     display: flex;
     flex-direction: column;
     gap: 43px;
@@ -465,13 +481,9 @@ main {
 .categoria-item {
     display: flex;
     align-items: center;
-    width: 258px;
     height: 16px;
     gap: 10px;
 }
-
-
-
 
 /* Texto categoría */
 .nombre-categoria {
@@ -489,26 +501,26 @@ main {
    =============================== */
 .productos {
     width: 70%;
-    height: 1470px;
     background-color: #DBE1F9;
-    padding: 25px 70px;
+    padding: 25px 0px;
     box-sizing: border-box;
 }
 
 /* Grid 3x3 */
 .grid-productos {
     display: grid;
-    grid-template-columns: repeat(3, 280px);
-    grid-template-rows: repeat(3, 446px);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 280px)); /* columnas fluidas */
     gap: 40px;
+    justify-content: center; /* centra las tarjetas cuando no caben 3 columnas */
 }
 
 /* ===============================
    TARJETA PRODUCTO
    =============================== */
 .card-producto {
-    width: 280px;
-    height: 446px;
+    width: 100%; /* ahora ocupa el ancho de la columna, no fijo */
+    max-width: 280px; /* para no crecer demasiado */
+    height: auto; /* altura automática según contenido */
     background-color: #C3CDF5;
     border: 1px solid #000;
     border-radius: 8px;
@@ -528,7 +540,8 @@ main {
 
 /* Imagen */
 .imagen-producto {
-    width: 240px;
+    width: 100%;  /* se adapta al ancho de la tarjeta */
+    max-width: 240px; /* no crecer más de esto */
     height: 240px;
     border-radius: 5px;
     border: 1px solid #000;
@@ -593,19 +606,257 @@ main {
    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
 }
 
+/* =====================================================
+   RESPONSIVE DESIGN
+   ===================================================== */
+/* Evitar scroll horizontal */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 /* ===============================
-   MENSAJE PRODUCTO AÑADIDO
+   TABLET (601px - 1024px)
    =============================== */
-.mensaje-carrito {
-    width: 248px;
-    height: 48px;
-    background-color: #3DF0D5;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
+@media (max-width: 1024px) {
+
+  /* HEADER */
+  .header {
+    justify-content: space-between;
+    padding: 15px 30px;
+  }
+
+  /* NAV */
+  .nav {
+    flex-direction: column-reverse;
+  }
+
+  .menu-enlaces {
     justify-content: center;
-    gap: 10px;
-    font-family: 'Akshar', sans-serif;
-    font-size: 16px;
-    color: #043029;
+  }
+
+  .buscador {
+    align-self: center;
+  }
+
+  /* FOOTER */
+  .footer {
+    gap: 20px;
+  }
+
+  /* TIENDA - MAIN */
+  .tienda-main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .categorias {
+    width: 100%;
+    padding: 30px 15px;
+    display: flex; /* Añadido para ayudar al centrado vertical/horizontal */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .grupo-categorias {
+    display: flex;
+    flex-direction: row;    /* Cambia de columna a fila */
+    flex-wrap: wrap;        /* Permite que bajen a la siguiente línea */
+    justify-content: center; /* Centra los grupos horizontalmente */
+    padding: 20px;              /* Elimina padding para más espacio */;         /* Espacio entre filas y columnas */
+    gap: 15px 25px;         /* Espacio entre filas y columnas */
+    width: 100%;
+  }
+
+  .titulo-categorias {
+    margin: 0 0 20px 0; /* Eliminamos el margin: auto para controlarlo mejor */
+    width: 100%;        /* Que ocupe todo el ancho para poder centrar el texto */
+    text-align: center;
+  }
+
+  .categoria-item {
+    width: auto;            /* Se ajusta al contenido */
+    height: auto;       /* Opcional: para que no se vean muy pegados */
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .nombre-categoria {
+    width: auto;            /* IMPORTANTE: elimina el ancho fijo de 200px */
+    height: auto;
+    text-align: left;       /* El texto se alinea con su icono, pero el grupo está centrado */
+  }
+
+  .productos {
+        width: 100%;
+        padding: 25px 30px;
+    }
+
+  .grid-productos {
+    display: grid;
+    gap: 20px;  /* gap entre tarjetas */
+    justify-content: center; /* centra las columnas dentro de la sección */
+  }
+
+   .bloque-tiendas {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .div-mapa-buscador,
+  .div-tiendas-general {
+    width: 100%;
+    align-items: center;
+  }
+
+  .buscador-tiendas {
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .imagen-mapa {
+    width: 100%;
+    max-width: 720px;
+    height: auto;
+  }
+
+  .filas-tiendas {
+    justify-content: center;
+    gap: 80px;
+  }
+
+  .bloque-presentacion {
+    padding: 0 30px;
+    gap: 30px;
+  }
+
+  .contenido-presentacion {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .titulo-principal {
+    font-size: 40px;
+  }
+
+  .imagen-presentacion {
+    max-width: 45%;
+  }
+
+}
+
+/* ===============================
+   MÓVIL (0px - 600px)
+   =============================== */
+@media (max-width: 600px) {
+
+  /* HEADER */
+  .header {
+    justify-content: center;
+  }
+
+  /* TIENDA: ocultar logo */
+  .logo {
+    display: none;
+  }
+
+  /* NAV - MENÚ HAMBURGUESA */
+.menu-hamburguesa {
+  display: block;
+  align-self: flex-end;
+}
+
+.menu-enlaces {
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Mostrar menú al hacer click */
+#menu-toggle:checked + .menu-hamburguesa + .menu-enlaces {
+  display: flex;
+}
+  .buscador {
+    width: 100%;
+  }
+
+
+  /* FOOTER */
+  .footer {
+    flex-direction: column;
+    gap: 20px;
+    height: auto;
+    padding: 20px;
+  }
+
+  .card-producto {
+    width: 100%;
+  }
+
+  .bloque-tiendas {
+    padding: 20px;
+  }
+
+  .buscador-tiendas {
+    width: 100%;
+  }
+
+  .imagen-mapa {
+    width: 100%;
+    height: auto;
+  }
+
+  .filas-tiendas {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .div-tiendas {
+    width: 100%;
+    max-width: 280px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .direccion-tienda li {
+    padding-left: 0;
+  }
+
+  .direccion-tienda li::before {
+    display: none;
+  }
+
+  .bloque-presentacion {
+    flex-direction: column;
+    height: auto;
+    padding: 30px 20px;
+    gap: 30px;
+  }
+
+  .contenido-presentacion {
+    width: 100%;
+  }
+
+  .titulo-principal {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .subtitulo {
+    font-size: 18px;
+  }
+
+  .imagen-presentacion {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  
 }
