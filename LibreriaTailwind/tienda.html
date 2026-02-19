@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amor en Letras - Tienda</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        akshar: ['Akshar', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-[#f8faf9] text-[#043029] m-0 p-0 box-border overflow-x-hidden font-akshar">
+
+    <header class="flex justify-center max-[1024px]:justify-between max-[600px]:justify-center items-center bg-[#cfd7f7] gap-[150px] max-[1024px]:gap-0 max-[1024px]:px-[30px] w-full h-[60px]">
+        <h1 class="text-[32px] font-semibold text-[#0b907c]">Amor en Letras</h1>
+        <img src="img/logo.png" alt="Logo" class="w-[50px] h-[50px] object-contain max-[600px]:hidden">
+    </header>
+
+    <nav class="flex justify-between items-center py-[10px] px-[30px] bg-[#f3f5fd] gap-5 max-[1024px]:flex-col-reverse relative">
+        <form class="flex items-center w-[300px] max-[600px]:w-full h-9 bg-[#e9efee] px-[10px] rounded-lg gap-[10px]" action="#" method="get">
+            <img src="img/lupa.png" alt="Lupa" class="w-6 h-6">
+            <input type="text" name="buscar" placeholder="Buscar libros..." class="border-none outline-none bg-transparent text-base font-normal text-[#70948d] w-full placeholder:text-[#70948D]">
+        </form>
+
+        <input type="checkbox" id="menu-toggle" class="hidden peer">
+        <label for="menu-toggle" class="hidden max-[600px]:block text-[32px] cursor-pointer text-[#0b907c] self-end">☰</label>
+
+        <ul class="menu-enlaces flex items-center gap-5 list-none max-[1024px]:justify-center max-[600px]:hidden peer-checked:max-[600px]:flex max-[600px]:flex-col max-[600px]:mt-[10px] max-[600px]:w-full">
+            <li class="font-semibold text-[#0b907c]"><a href="index.html" class="no-underline text-[#0b907c]">Tu librería</a></li>
+            <li class="font-semibold text-[#0b907c]">Compra Online</li>
+            <li class="font-semibold text-[#0b907c]">Contacto</li>
+        </ul>
+    </nav>
+
+    <main class="flex flex-row max-[1024px]:flex-col w-full min-h-screen bg-[#F3F5FD]">
+
+        <aside class="w-[30%] max-[1024px]:w-full bg-[#E7EBFB] p-[46px] max-[1024px]:p-[30px] flex flex-col items-center box-border lg:self-start">
+            <h3 class="text-[32px] font-semibold text-[#076053] mb-[43px] text-center w-[200px] h-[24px]">Categorías</h3>
+
+            <div class="flex flex-col max-[1024px]:flex-row max-[1024px]:flex-wrap max-[1024px]:justify-center gap-[43px] max-[1024px]:gap-[20px] w-full">
+                <label class="flex items-center gap-[10px] h-[16px] cursor-pointer">
+                    <input type="checkbox">
+                    <span class="text-[18px] font-semibold text-[#0B907C] w-[200px] max-[1024px]:w-auto h-[16px]">Todos los productos</span>
+                </label>
+                <label class="flex items-center gap-[10px] h-[16px] cursor-pointer">
+                    <input type="checkbox">
+                    <span class="text-[18px] font-semibold text-[#0B907C] w-[200px] max-[1024px]:w-auto h-[16px]">Libros</span>
+                </label>
+                <label class="flex items-center gap-[10px] h-[16px] cursor-pointer">
+                    <input type="checkbox">
+                    <span class="text-[18px] font-semibold text-[#0B907C] w-[200px] max-[1024px]:w-auto h-[16px]">Tazas</span>
+                </label>
+                <label class="flex items-center gap-[10px] h-[16px] cursor-pointer">
+                    <input type="checkbox">
+                    <span class="text-[18px] font-semibold text-[#0B907C] w-[200px] max-[1024px]:w-auto h-[16px]">Bolsas</span>
+                </label>
+                <label class="flex items-center gap-[10px] h-[16px] cursor-pointer">
+                    <input type="checkbox">
+                    <span class="text-[18px] font-semibold text-[#0B907C] w-[200px] max-[1024px]:w-auto h-[16px]">Otros</span>
+                </label>
+            </div>
+        </aside>
+
+        <section class="w-[70%] max-[1024px]:w-full bg-[#DBE1F9] py-[25px] px-[20px] box-border">
+            <div class="grid grid-cols-[repeat(auto-fit,280px)] gap-[40px] justify-center">
+                
+                <article class="flex flex-col items-center bg-[#C3CDF5] border border-black rounded-[8px] p-[16px] gap-[8px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.25)] transition-shadow duration-200">
+                    <img src="img/libro1.png" alt="Libro" class="w-full max-w-[240px] h-[240px] object-cover border border-black rounded-[5px]">
+                    <h4 class="text-[16px] text-[#076053] text-center font-normal h-[34px] flex items-center w-[240px] justify-center">Oscar. Un acuerdo matrimonial imposible (Salt Mountains nº 1)</h4>
+                    <p class="text-[12px] text-[#0B907C] text-center h-[60px] flex items-center w-[240px] justify-center">Un matrimonio por conveniencia que lentamente se transforma en un amor inesperado y profundo.</p>
+                    <div class="text-[14px] text-[#0B907C] font-normal h-[16px] w-[240px] text-center">15,00€</div>
+                    <button class="w-[120px] h-[32px] bg-[#16EDCD] text-white rounded-[8px] text-[14px] hover:shadow-[0_3px_8px_rgba(0,0,0,0.25)] transition-all">Añadir al carrito</button>
+                </article>
+
+                <article class="flex flex-col items-center bg-[#C3CDF5] border border-black rounded-[8px] p-[16px] gap-[8px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.25)] transition-shadow duration-200">
+                    <img src="img/libro2.png" alt="Libro" class="w-full max-w-[240px] h-[240px] object-cover border border-black rounded-[5px]">
+                    <h4 class="text-[16px] text-[#076053] text-center font-normal h-[34px] flex items-center w-[240px] justify-center">Una luna sin miel</h4>
+                    <p class="text-[12px] text-[#0B907C] text-center h-[60px] flex items-center w-[240px] justify-center">Una historia de amor, secretos y segundas oportunidades que desafían el destino.</p>
+                    <div class="text-[14px] text-[#0B907C] font-normal h-[16px] w-[240px] text-center">17,05€</div>
+                    <button class="w-[120px] h-[32px] bg-[#16EDCD] text-white rounded-[8px] text-[14px] hover:shadow-[0_3px_8px_rgba(0,0,0,0.25)] transition-all">Añadir al carrito</button>
+                </article>
+
+                <article class="flex flex-col items-center bg-[#C3CDF5] border border-black rounded-[8px] p-[16px] gap-[8px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.25)] transition-shadow duration-200">
+                    <img src="img/libro3.png" alt="Libro" class="w-full max-w-[240px] h-[240px] object-cover border border-black rounded-[5px]">
+                    <h4 class="text-[16px] text-[#076053] text-center font-normal h-[34px] flex items-center w-[240px] justify-center">Cupido, tenemos que hablar</h4>
+                    <p class="text-[12px] text-[#0B907C] text-center h-[60px] flex items-center w-[240px] justify-center">Romance contemporáneo con toques de humor, donde el amor llega cuando menos lo esperas.</p>
+                    <div class="text-[14px] text-[#0B907C] font-normal h-[16px] w-[240px] text-center">15,20€</div>
+                    <button class="w-[120px] h-[32px] bg-[#16EDCD] text-white rounded-[8px] text-[14px] hover:shadow-[0_3px_8px_rgba(0,0,0,0.25)] transition-all">Añadir al carrito</button>
+                </article>
+
+                <article class="flex flex-col items-center bg-[#C3CDF5] border border-black rounded-[8px] p-[16px] gap-[8px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.25)] transition-shadow duration-200">
+                    <img src="img/libro4.png" alt="Libro" class="w-full max-w-[240px] h-[240px] object-cover border border-black rounded-[5px]">
+                    <h4 class="text-[16px] text-[#076053] text-center font-normal h-[34px] flex items-center w-[240px] justify-center">Salvatore (Bestias peligrosas nª1)</h4>
+                    <p class="text-[12px] text-[#0B907C] text-center h-[60px] flex items-center w-[240px] justify-center">Un relato apasionante sobre pasión, traición y redención entre dos almas destinadas a encontrarse.</p>
+                    <div class="text-[14px] text-[#0B907C] font-normal h-[16px] w-[240px] text-center">17,99€</div>
+                    <button class="w-[120px] h-[32px] bg-[#16EDCD] text-white rounded-[8px] text-[14px] hover:shadow-[0_3px_8px_rgba(0,0,0,0.25)] transition-all">Añadir al carrito</button>
+                </article>
+
+                <article class="flex flex-col items-center bg-[#C3CDF5] border border-black rounded-[8px] p-[16px] gap-[8px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.25)] transition-shadow duration-200">
+                    <img src="img/libro5.png" alt="Libro" class="w-full max-w-[240px] h-[240px] object-cover border border-black rounded-[5px]">
+                    <h4 class="text-[16px] text-[#076053] text-center font-normal h-[34px] flex items-center w-[240px] justify-center">Besar a un elfo</h4>
+                    <p class="text-[12px] text-[#0B907C] text-center h-[60px] flex items-center w-[240px] justify-center">Romance mágico lleno de encuentros inesperados y chispa sobrenatural.</p>
+                    <div class="text-[14px] text-[#0B907C] font-normal h-[16px] w-[240px] text-center">16,05€</div>
+                    <button class="w-[120px] h-[32px] bg-[#16EDCD] text-white rounded-[8px] text-[14px] hover:shadow-[0_3px_8px_rgba(0,0,0,0.25)] transition-all">Añadir al carrito</button>
+                </article>
+
+                <article class="flex flex-col items-center bg-[#C3CDF5] border border-black rounded-[8px] p-[16px] gap-[8px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.25)] transition-shadow duration-200">
+                    <img src="img/libro6.png" alt="Libro" class="w-full max-w-[240px] h-[240px] object-cover border border-black rounded-[5px]">
+                    <h4 class="text-[16px] text-[#076053] text-center font-normal h-[34px] flex items-center w-[240px] justify-center">Donde todo brilla</h4>
+                    <p class="text-[12px] text-[#0B907C] text-center h-[60px] flex items-center w-[240px] justify-center">Una historia de amor que ilumina incluso los momentos más oscuros del corazón.</p>
+                    <div class="text-[14px] text-[#0B907C] font-normal h-[16px] w-[240px] text-center">17,95€</div>
+                    <button class="w-[120px] h-[32px] bg-[#16EDCD] text-white rounded-[8px] text-[14px] hover:shadow-[0_3px_8px_rgba(0,0,0,0.25)] transition-all">Añadir al carrito</button>
+                </article>
+
+                <article class="flex flex-col items-center bg-[#C3CDF5] border border-black rounded-[8px] p-[16px] gap-[8px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.25)] transition-shadow duration-200">
+                    <img src="img/libro7.png" alt="Libro" class="w-full max-w-[240px] h-[240px] object-cover border border-black rounded-[5px]">
+                    <h4 class="text-[16px] text-[#076053] text-center font-normal h-[34px] flex items-center w-[240px] justify-center">Donde no puedas encontrarme</h4>
+                    <p class="text-[12px] text-[#0B907C] text-center h-[60px] flex items-center w-[240px] justify-center">Un romance intenso lleno de secretos que ponen a prueba el corazón.</p>
+                    <div class="text-[14px] text-[#0B907C] font-normal h-[16px] w-[240px] text-center">16,05€</div>
+                    <button class="w-[120px] h-[32px] bg-[#16EDCD] text-white rounded-[8px] text-[14px] hover:shadow-[0_3px_8px_rgba(0,0,0,0.25)] transition-all">Añadir al carrito</button>
+                </article>
+
+                <article class="flex flex-col items-center bg-[#C3CDF5] border border-black rounded-[8px] p-[16px] gap-[8px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.25)] transition-shadow duration-200">
+                    <img src="img/libro8.png" alt="Libro" class="w-full max-w-[240px] h-[240px] object-cover border border-black rounded-[5px]">
+                    <h4 class="text-[16px] text-[#076053] text-center font-normal h-[34px] flex items-center w-[240px] justify-center">El arte de ser nosotros</h4>
+                    <p class="text-[12px] text-[#0B907C] text-center h-[60px] flex items-center w-[240px] justify-center">Una historia sobre amor, confianza y descubrir juntos el verdadero “nosotros”.</p>
+                    <div class="text-[14px] text-[#0B907C] font-normal h-[16px] w-[240px] text-center">10,40€</div>
+                    <button class="w-[120px] h-[32px] bg-[#16EDCD] text-white rounded-[8px] text-[14px] hover:shadow-[0_3px_8px_rgba(0,0,0,0.25)] transition-all">Añadir al carrito</button>
+                </article>
+
+                <article class="flex flex-col items-center bg-[#C3CDF5] border border-black rounded-[8px] p-[16px] gap-[8px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.25)] transition-shadow duration-200">
+                    <img src="img/libro9.png" alt="Libro" class="w-full max-w-[240px] h-[240px] object-cover border border-black rounded-[5px]">
+                    <h4 class="text-[16px] text-[#076053] text-center font-normal h-[34px] flex items-center w-[240px] justify-center">Marcos (Bestias peligrosas nº 2)</h4>
+                    <p class="text-[12px] text-[#0B907C] text-center h-[60px] flex items-center w-[240px] justify-center">Pasión y peligro se entrelazan en esta segunda entrega de amor y aventura.</p>
+                    <div class="text-[14px] text-[#0B907C] font-semibold w-[240px] text-center">16,63€</div>
+                    <button class="w-[120px] h-[32px] bg-[#16EDCD] text-white rounded-[8px] text-[14px] hover:shadow-[0_3px_8px_rgba(0,0,0,0.25)] transition-all">Añadir al carrito</button>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="flex justify-between items-center px-[60px] h-[120px] bg-[#cfd7f7] text-[#25312f] max-[1024px]:gap-5 max-[600px]:flex-col max-[600px]:h-auto max-[600px]:p-5">
+        <div class="flex items-center gap-5">
+            <img src="img/instagram.png" alt="Instagram" class="w-10 h-10">
+            <img src="img/facebook.png" alt="Facebook" class="w-10 h-10">
+            <img src="img/x.png" alt="X" class="w-10 h-10">
+        </div>
+        <div class="flex gap-[30px] justify-center text-center">
+            <span>Política de datos</span>
+            <span>Cookies</span>
+        </div>
+        <div class="text-center">© 2025 Amor en Letras</div>
+    </footer>
+
+</body>
+</html>

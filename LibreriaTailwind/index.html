@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amor en Letras</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        akshar: ['Akshar', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="font-akshar bg-[#f8faf9] text-[#043029] m-0 p-0 box-border overflow-x-hidden">
+
+    <header class="flex justify-center max-[1024px]:justify-between items-center bg-[#cfd7f7] gap-[150px] max-[1024px]:gap-0 max-[1024px]:px-[30px] w-full h-[60px]">
+        <h1 class="text-[32px] font-semibold text-[#0b907c] max-[600px]:w-full max-[600px]:text-center">Amor en Letras</h1>
+        <img src="img/logo.png" alt="Logo" class="w-[50px] h-[50px] object-contain max-[600px]:hidden">
+    </header>
+
+    <nav class="flex justify-between items-center py-[10px] px-[30px] bg-[#f3f5fd] gap-5 max-[1024px]:flex-col-reverse">
+        <form class="flex items-center w-[300px] max-[600px]:w-full h-9 bg-[#e9efee] px-[10px] rounded-lg gap-[10px]" action="#" method="get">
+            <img src="img/lupa.png" alt="Lupa" class="w-6 h-6">
+            <input type="text" name="buscar" placeholder="Buscar libros..." class="border-none outline-none bg-transparent text-base font-normal text-[#70948d] w-full placeholder:text-[#70948D]">
+        </form>
+
+        <input type="checkbox" id="menu-toggle" class="hidden peer">
+
+        <label for="menu-toggle" class="hidden max-[600px]:block text-[32px] cursor-pointer text-[#0b907c] self-end">
+            ☰
+        </label>
+
+        <ul class="menu-enlaces flex items-center gap-5 list-none max-[1024px]:justify-center max-[600px]:hidden peer-checked:max-[600px]:flex max-[600px]:flex-col max-[600px]:mt-[10px] max-[600px]:w-full">
+            <li class="text-[#0b907c] font-semibold">Tu librería</li>
+            <li class="text-[#0b907c] font-semibold"><a href="tienda.html" class="no-underline text-[#0b907c]">Compra Online</a></li>
+            <li class="text-[#0b907c] font-semibold">Contacto</li>
+        </ul>
+    </nav>
+
+    <main class="w-full">
+
+        <section class="flex justify-between items-center px-[50px] max-[1024px]:px-[30px] h-[450px] max-[600px]:h-auto max-[600px]:py-[30px] max-[600px]:flex-col bg-[#e7ebfb] gap-[50px] max-[1024px]:gap-[30px]">
+            <div class="flex flex-col justify-center items-center gap-[15px] text-center w-[600px] max-[1024px]:w-full max-[1024px]:max-w-[500px]">
+                <h2 class="text-[48px] max-[1024px]:text-[40px] max-[600px]:text-[32px] font-bold text-[#0b907c]">Bienvenido a Amor en Letras</h2>
+                <h4 class="text-2xl max-[600px]:text-[18px] font-semibold text-[#043029]">Tu librería de novelas románticas y más</h4>
+                <a href="tienda.html" class="inline-block w-[160px] h-10 bg-[#0fc0a6] text-white font-semibold text-lg text-center leading-[40px] rounded-md no-underline cursor-pointer">Explorar libros</a>
+            </div>
+            <img src="img/personas-leyendo.png" alt="Personas leyendo" class="w-[500px] h-[400px] object-cover max-w-[40%] max-[1024px]:max-w-[45%] max-[600px]:max-w-full max-[600px]:h-auto">
+        </section>
+
+        <section class="bg-[#f3f5fd] flex flex-col items-center py-10 px-8 gap-[30px]">
+            <h3 class="text-lg font-semibold text-[#043029] text-center">Descubre nuestras ofertas y bestsellers de romance</h3>
+
+            <div class="grid grid-cols-[repeat(auto-fill,200px)] gap-[60px] justify-center w-full">
+                <article class="flex flex-col items-center bg-[#e2e9e8] w-[200px] h-[250px] py-[10px] gap-[5px]">
+                    <img src="img/libro1.png" alt="Libro 1" class="w-[180px] h-[170px] object-cover border border-black">
+                    <div class="w-[180px] h-[39px] text-[12px] text-[#043029] text-center flex items-center justify-center">Oscar. Un acuerdo matrimonial imposible (Salt Mountains nº 1)</div>
+                    <hr class="w-[180px] border border-black">
+                    <div class="text-[14px] text-[#043029]">15,00€</div>
+                </article>
+                <article class="flex flex-col items-center bg-[#e2e9e8] w-[200px] h-[250px] py-[10px] gap-[5px]">
+                    <img src="img/libro2.png" alt="Libro 2" class="w-[180px] h-[170px] object-cover border border-black">
+                    <div class="w-[180px] h-[39px] text-[12px] text-[#043029] text-center flex items-center justify-center">Una luna sin miel</div>
+                    <hr class="w-[180px] border border-black">
+                    <div class="text-[14px] text-[#043029]">17,05€</div>
+                </article>
+                <article class="flex flex-col items-center bg-[#e2e9e8] w-[200px] h-[250px] py-[10px] gap-[5px]">
+                    <img src="img/libro3.png" alt="Libro 3" class="w-[180px] h-[170px] object-cover border border-black">
+                    <div class="w-[180px] h-[39px] text-[12px] text-[#043029] text-center flex items-center justify-center">Cupido, tenemos que hablar</div>
+                    <hr class="w-[180px] border border-black">
+                    <div class="text-[14px] text-[#043029]">15,20€</div>
+                </article>
+                <article class="flex flex-col items-center bg-[#e2e9e8] w-[200px] h-[250px] py-[10px] gap-[5px]">
+                    <img src="img/libro4.png" alt="Libro 4" class="w-[180px] h-[170px] object-cover border border-black">
+                    <div class="w-[180px] h-[39px] text-[12px] text-[#043029] text-center flex items-center justify-center">Salvatore (Bestias peligrosas nª1)</div>
+                    <hr class="w-[180px] border border-black">
+                    <div class="text-[14px] text-[#043029]">17,99€</div>
+                </article>
+                <article class="flex flex-col items-center bg-[#e2e9e8] w-[200px] h-[250px] py-[10px] gap-[5px]">
+                    <img src="img/libro5.png" alt="Libro 5" class="w-[180px] h-[170px] object-cover border border-black">
+                    <div class="w-[180px] h-[39px] text-[12px] text-[#043029] text-center flex items-center justify-center">Besar a un elfo</div>
+                    <hr class="w-[180px] border border-black">
+                    <div class="text-[14px] text-[#043029]">16,05€</div>
+                </article>
+                <article class="flex flex-col items-center bg-[#e2e9e8] w-[200px] h-[250px] py-[10px] gap-[5px]">
+                    <img src="img/libro6.png" alt="Libro 6" class="w-[180px] h-[170px] object-cover border border-black">
+                    <div class="w-[180px] h-[39px] text-[12px] text-[#043029] text-center flex items-center justify-center">Donde todo brilla</div>
+                    <hr class="w-[180px] border border-black">
+                    <div class="text-[14px] text-[#043029]">17,95€</div>
+                </article>
+            </div>
+        </section>
+
+        <section class="flex flex-wrap gap-x-[15px] gap-y-[15px] py-[15px] px-[50px] max-[600px]:px-[20px] bg-[#e7ebfb] justify-center max-[1024px]:flex-col items-center lg:items-start lg:justify-center">
+    
+            <div class="flex flex-col gap-[20px] flex-none items-center max-[1024px]:w-full">
+                <form class="flex items-center gap-[10px] px-[14px] w-[520px] max-[1024px]:w-full max-[1024px]:max-w-[520px] h-[36px] rounded-[8px] bg-[#dae3e2]" action="#" method="get">
+                    <img src="img/lupa2.png" alt="Lupa" class="w-[20px] h-[20px]">
+                    <input type="text" name="buscar-tienda" placeholder="Busca tu tienda más cercana..." 
+                           class="border-none outline-none bg-transparent w-full text-[16px] text-[#70948d] placeholder:text-[#4A635E]">
+                </form>
+
+                <img src="img/mapa.png" alt="Mapa" 
+                     class="w-[720px] h-[218px] max-[1024px]:w-full max-[1024px]:max-w-[720px] max-[1024px]:h-auto object-cover">
+            </div>
+
+            <div class="flex flex-col gap-[20px] flex-none w-[600px] max-[1024px]:w-full items-center">
+                <h3 class="text-[32px] font-semibold text-[#043029]">Tiendas físicas</h3>
+
+                <div class="flex flex-row max-[600px]:flex-col gap-[120px] max-[1024px]:gap-[80px] max-[600px]:gap-[30px] justify-center items-start max-[600px]:items-center">
+                    
+                    <div class="flex flex-col gap-[5px] w-[160px] max-[600px]:w-full max-[600px]:max-w-[280px] max-[600px]:items-center max-[600px]:text-center">
+                        <div class="text-[22px] font-semibold text-[#043029]">Disponibles:</div>
+                        
+                        <div class="flex flex-col gap-1">
+                            <h5 class="text-[18px] text-[#25312F] font-semibold">Tienda Centro</h5>
+                            <ul class="list-none p-0 m-0">
+                                <li class="relative pl-[14px] text-[14px] text-[#4A635E] before:content-[''] before:w-[6px] before:h-[6px] before:bg-[#4a635e] before:rounded-full before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 max-[600px]:pl-0 max-[600px]:before:hidden">Calle Amor 45</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="flex flex-col gap-1">
+                            <h5 class="text-[18px] text-[#25312F] font-semibold">Tienda Norte</h5>
+                            <ul class="list-none p-0 m-0">
+                                <li class="relative pl-[14px] text-[14px] text-[#4A635E] before:content-[''] before:w-[6px] before:h-[6px] before:bg-[#4a635e] before:rounded-full before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 max-[600px]:pl-0 max-[600px]:before:hidden">Avenida Romance 120</li>
+                            </ul>
+                        </div>
+
+                        <div class="flex flex-col gap-1">
+                            <h5 class="text-[18px] text-[#25312F] font-semibold">Tienda Sur</h5>
+                            <ul class="list-none p-0 m-0">
+                                <li class="relative pl-[14px] text-[14px] text-[#4A635E] before:content-[''] before:w-[6px] before:h-[6px] before:bg-[#4a635e] before:rounded-full before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 max-[600px]:pl-0 max-[600px]:before:hidden">Plaza Beso 98</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-[5px] w-[160px] max-[600px]:w-full max-[600px]:max-w-[280px] max-[600px]:items-center max-[600px]:text-center">
+                        <div class="text-[22px] font-semibold text-[#043029]">Próximamente:</div>
+                        
+                        <div class="flex flex-col gap-1">
+                            <h5 class="text-[18px] text-[#25312F] font-semibold">Tienda Centro</h5>
+                            <ul class="list-none p-0 m-0">
+                                <li class="relative pl-[14px] text-[14px] text-[#4A635E] before:content-[''] before:w-[6px] before:h-[6px] before:bg-[#4a635e] before:rounded-full before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 max-[600px]:pl-0 max-[600px]:before:hidden">Calle Suspiro 81</li>
+                            </ul>
+                        </div>
+
+                        <div class="flex flex-col gap-1">
+                            <h5 class="text-[18px] text-[#25312F] font-semibold">Tienda Norte</h5>
+                            <ul class="list-none p-0 m-0">
+                                <li class="relative pl-[14px] text-[14px] text-[#4A635E] before:content-[''] before:w-[6px] before:h-[6px] before:bg-[#4a635e] before:rounded-full before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 max-[600px]:pl-0 max-[600px]:before:hidden">Avenida Amanecer 12</li>
+                            </ul>
+                        </div>
+
+                        <div class="flex flex-col gap-1">
+                            <h5 class="text-[18px] text-[#25312F] font-semibold">Tienda Sur</h5>
+                            <ul class="list-none p-0 m-0">
+                                <li class="relative pl-[14px] text-[14px] text-[#4A635E] before:content-[''] before:w-[6px] before:h-[6px] before:bg-[#4a635e] before:rounded-full before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 max-[600px]:pl-0 max-[600px]:before:hidden">Paseo del Rio 14</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="flex justify-between items-center px-[60px] h-[120px] bg-[#cfd7f7] text-[#25312f] max-[1024px]:gap-5 max-[600px]:flex-col max-[600px]:h-auto max-[600px]:p-5">
+        <div class="flex items-center gap-5">
+            <img src="img/instagram.png" alt="Instagram" class="w-10 h-10">
+            <img src="img/facebook.png" alt="Facebook" class="w-10 h-10">
+            <img src="img/x.png" alt="X" class="w-10 h-10">
+        </div>
+        <div class="flex gap-[30px] justify-center text-center">
+            <span>Política de datos</span>
+            <span>Cookies</span>
+        </div>
+        <div class="text-center">© 2025 Amor en Letras</div>
+    </footer>
+
+</body>
+</html>
